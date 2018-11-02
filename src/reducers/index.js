@@ -1,6 +1,8 @@
-import { combineReducers } from 'redux';
-import placeholder from './placeholder';
+import { combineReducers } from "redux";
+import handleQuestions from "./handleQuestions";
+import gameRunning from "./gameRunning";
 
 export default combineReducers({
-  placeholder
+  handleQuestions: handleQuestions,
+  gameRunning: gameRunning
 });

@@ -1,12 +1,12 @@
-import React from 'react';
-
+import React from "react";
+import QuestionContainer from "../containers/QuestionContainer";
 class App extends React.Component {
-  render(){
-    return (
-      <div>
-        App contents go here
-      </div>
-    )
+  componentDidMount() {
+    this.props.fetchQuizQuestions();
+  }
+
+  render() {
+    return <QuestionContainer />;
   }
 }
 
