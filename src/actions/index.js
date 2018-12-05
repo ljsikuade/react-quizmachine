@@ -28,7 +28,7 @@ export function closeLobby(difficulty) {
 
 export function fetchQuestion(difficulty) {
   return function(dispatch) {
-    fetch(
+    return fetch(
       `https://opentdb.com/api.php?amount=10&category=23&difficulty=${difficulty}&type=multiple`
     )
       .then(results => results.json())
