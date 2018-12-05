@@ -9,6 +9,7 @@ answer sheet at the end (along with a silly gif based on the user's score).
 * React
 * Redux
 * SCSS
+* Jest, Redux-Mock-Store, Fetch-Mock
 
 # Setting Up
 
@@ -25,6 +26,11 @@ npm i
 npm run build
 ```
 3. Copy and paste the index.html path into your browser
+
+## Testing
+```
+npm test
+```
 
 # Things I would have liked to add:
 
