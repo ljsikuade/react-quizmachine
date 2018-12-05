@@ -16,7 +16,7 @@ describe("actions", () => {
   afterEach(() => {
     fetchMock.restore();
   });
-  it("should dispatch questions action", () => {
+  it("should store questions in state", () => {
     // Initialize mockstore with empty state
     const initialState = {};
     const store = mockStore(initialState);

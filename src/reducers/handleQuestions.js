@@ -1,15 +1,13 @@
-function handleQuestions(
-  state = {
-    questions: [],
-    current: {},
-    correct: [],
-    counter: 0,
-    currentAnswers: [],
-    score: 0,
-    gameRunning: true
-  },
-  action
-) {
+export const initialState = {
+  questions: [],
+  current: {},
+  correct: [],
+  counter: 0,
+  currentAnswers: [],
+  score: 0,
+  gameRunning: true
+};
+function handleQuestions(state = initialState, action) {
   switch (action.type) {
     case "STORE_QUESTIONS":
       const allAnswersPostFetch = [
@@ -18,7 +16,9 @@ function handleQuestions(
         action.questions[0].incorrect_answers[2],
         action.questions[0].correct_answer
       ];
-      let currentAnswersAfterFetch = shuffle(allAnswersPostFetch);
+      //DISABLED FOR TESTING
+      //let currentAnswersAfterFetch = shuffle(allAnswersPostFetch);
+
       return Object.assign(
         {},
         {
@@ -26,7 +26,7 @@ function handleQuestions(
           current: action.questions[0],
           correct: state.correct,
           counter: 0,
-          currentAnswers: currentAnswersAfterFetch,
+          currentAnswers: allAnswersPostFetch,
           score: 0,
           gameRunning: true
         }
@@ -39,7 +39,8 @@ function handleQuestions(
         currentQuestion.incorrect_answers[2],
         currentQuestion.correct_answer
       ];
-      let currentAnswersNext = shuffle(allAnswersNext);
+      //DISABLED DUE TO TESTING
+      //let currentAnswersNext = shuffle(allAnswersNext);
       if (!currentQuestion) {
         return state;
       }
@@ -48,7 +49,7 @@ function handleQuestions(
         {
           questions: state.questions,
           current: currentQuestion,
-          currentAnswers: currentAnswersNext,
+          currentAnswers: allAnswersNext,
           correct: state.correct,
           counter: state.counter + 1,
           score: state.score,
