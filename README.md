@@ -1,4 +1,5 @@
 # React Quizmachine
+Note: Question shuffling has been temporarily disable to facilitate testing.
 
 My first solo encounter with Redux is this history quiz app. Using the Open Trivia API
 I created a quiz that generates questions for a single user and then presents an
